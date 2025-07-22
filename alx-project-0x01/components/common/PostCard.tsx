@@ -1,20 +1,15 @@
-import React from "react";
-import Button from "./Button";
+import { PostProps } from "@/interfaces";
 
-type PostCardProps = {
-  title: string;
-  description: string;
-  imageUrl: string;
-};
-
-const PostCard = ({ title, description, imageUrl }: PostCardProps) => {
+const PostCard: React.FC<PostProps> = ({ title, body, userId, id }) => {
   return (
-    <div className="bg-white rounded shadow p-4 max-w-md">
-      <img src={imageUrl} alt={title} className="w-full h-48 object-cover rounded" />
-      <h2 className="text-lg font-bold mt-2">{title}</h2>
-      <p className="text-gray-600 mt-1">{description}</p>
-      <div className="mt-4">
-        <Button text="Read More" />
+    <div className="max-w-xl mx-auto my-6 p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+      <div className="mb-4">
+        <h2 className="text-2xl font-semibold text-gray-800">{title}</h2>
+      </div>
+      <p className="text-gray-600">{body}</p>
+      <div className="mt-4 flex items-center justify-between text-sm text-gray-500">
+        <span>User ID: {userId}</span>
+        <span>Post ID: {id}</span>
       </div>
     </div>
   );
