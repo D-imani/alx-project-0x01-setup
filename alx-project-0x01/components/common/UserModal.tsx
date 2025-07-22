@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { UserModalProps, UserData } from "@/interfaces";
 
-const UserModal: React.FC<UserModalProps> = ({ isOpen, onClose, onSave }) => {
+const UserModal: React.FC<UserModalProps> = ({ isOpen, onClose, onSubmit }) => {
   const [formData, setFormData] = useState<UserData>({
     id: Date.now(),
     name: "",
@@ -66,7 +66,7 @@ const UserModal: React.FC<UserModalProps> = ({ isOpen, onClose, onSave }) => {
   };
 
   const handleSave = () => {
-    onSave(formData);
+    onSubmit(formData);
     onClose();
   };
 
