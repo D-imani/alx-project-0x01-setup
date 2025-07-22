@@ -2,9 +2,8 @@
 import React from "react";
 import { UserProps } from "@/interfaces"; // adjust path as needed
 
-type UserCardProps = Pick<UserProps, "name" | "email" | "username" | "address" |"phone"| "website"| "company">;
 
-const UserCard: React.FC<UserCardProps> = ({ name, email, username, address, company }) => {
+const UserCard: React.FC<UserProps> = ({ name, email, username, address, company }) => {
   return (
     <div className="bg-white shadow p-4 rounded">
       <h3 className="font-semibold text-lg">{name}</h3>
