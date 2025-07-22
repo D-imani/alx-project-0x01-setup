@@ -3,7 +3,7 @@ export interface PostProps {
   id: number;
   title: string;
   body: string;
-};
+}
 export interface UserProps {
     id : number ;
     name : string;
@@ -26,4 +26,4 @@ export interface UserProps {
         catchPhrase : string;
         bs : string;
     };
-};
+}
