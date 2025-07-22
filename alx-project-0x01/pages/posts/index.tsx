@@ -1,4 +1,5 @@
 import PostCard from "@/components/common/PostCard";
+import Header from "@/components/layout/Header";
 
 const posts = [
   {
@@ -16,6 +17,7 @@ const posts = [
 const PostsPage = () => {
   return (
     <div className="p-6">
+        <Header />
       <h1 className="text-2xl font-bold mb-4">Posts</h1>
       <div className="grid gap-6 sm:grid-cols-2">
         {posts.map((post, idx) => (

@@ -1,3 +1,5 @@
+import Header from "@/components/layout/Header";
+
 const users = [
   {
     name: "Jane Doe",
@@ -14,6 +16,7 @@ const users = [
 const UsersPage = () => {
   return (
     <div className="p-6">
+        <Header />
       <h1 className="text-2xl font-bold mb-4">Users</h1>
       <div className="space-y-4">
         {users.map((user, idx) => (
