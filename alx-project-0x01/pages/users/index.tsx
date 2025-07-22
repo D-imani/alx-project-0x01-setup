@@ -2,7 +2,12 @@ import Header from "@/components/layout/Header";
 import UserCard from "@/components/common/UserCard";
 import { UserProps } from "@/interfaces";
 
-const UsersPage = ({ posts }: { posts: UserProps[] }) => {
+// Define a props interface
+interface UsersPageProps {
+  posts: UserProps[];
+}
+
+const UsersPage : React.FC<UsersPageProps> = ({ posts }) => {
   return (
     <div className="p-6">
         <Header />
